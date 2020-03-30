@@ -22,7 +22,7 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
- 
+
     steps:
       - name: 'Checkout'
         uses: actions/checkout@master
@@ -61,7 +61,7 @@ jobs:
           tf_actions_version: ${{ env.TERRAFORM_VERSION }}
           tf_actions_subcommand: 'apply'
           tf_actions_working_dir: ${{ env.TERRAFORM_WORKDIR }}
-  
+
   dispatch:
     name: Terraform Deploy
     runs-on: ubuntu-latest
@@ -69,5 +69,6 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: hmanzur/break-the-monolith
           event-type: deploy-app
