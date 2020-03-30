@@ -1,10 +1,10 @@
+#Availability zones
 variable "region" {
-  description = "ECS region"
+  description = "AWS Region"
   default     = "us-east-1"
 }
 
-#Availability zones
-variable "availability_zones" {
-  description = "Availability zones"
-  default     = []
+variable "environment" {
+  description = "Environment name"
+  default     = "break-the-monolith"
 }
