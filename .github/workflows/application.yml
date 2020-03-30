@@ -55,7 +55,10 @@ jobs:
         uses: dschep/install-pipenv-action@v1
 
       - name : "Run tests"
-        run: pytest apps/${{ matrix.service }}
+        run: |
+          pipenv install
+          pipenv shell
+          pytest apps/${{ matrix.service }}
 
   deploy:
     name: Deploy
