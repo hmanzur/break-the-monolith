@@ -1,0 +1,7 @@
+# Ignored files for fast build
+
+.github/
+terraform/
+*/unit/
+*.md
+*/conftest.py

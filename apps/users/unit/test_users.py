@@ -1,6 +1,6 @@
 import pytest
 import socket
-import application as app
+import app
 
 @pytest.fixture
 def client():
