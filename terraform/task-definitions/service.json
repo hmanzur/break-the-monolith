@@ -1,0 +1,18 @@
+[
+    {
+      "name": "microservice",
+      "image": "nginx:latest",
+      "entryPoint": [],
+      "environment": [],
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "volumesFrom": [],
+      "links": [],
+      "mountPoints": [],
+      "essential": true
+    }
+]
